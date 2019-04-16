@@ -11,8 +11,8 @@ void yyerror(char *);
 
 %%
 
-S : E out { printf("%d\n ", $1); }
-    | S E out { printf("%d\n ", $2); };
+S : E out { printf("= %d\n ", $1); }
+    | S E out { printf("= %d\n ", $2); };
 
 B : zero    { $$ = 0; }
     | one   { $$ = 1; }
